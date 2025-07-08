@@ -1,0 +1,8 @@
+Describe: Pizza.prototype.clearInputtedData();
+
+// Test One
+Test: "It should clear an order of it's properties information."
+Code:
+let newPizzaOrder = new Pizza(["ground beef", "pepperoni", "chicken", "pineapple"], "Personal", 6.99);
+Expected Results:
+Pizza {toppings: [], size: "", price: 0}

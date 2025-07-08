@@ -1,0 +1,9 @@
+Describe: Pizza.prototype.updatePricing(charge);
+
+// Test One
+Test: "It should add the charge to the price property of the object."
+Code:
+let newPizzaOrder = new Pizza([], "", 0);
+newPizzaOrder.updatePricing(7.99);
+Expected Result:
+Pizza {topping: [], size: "", price: 7.99};

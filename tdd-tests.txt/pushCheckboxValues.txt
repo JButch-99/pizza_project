@@ -1,0 +1,8 @@
+Describe: pushCheckboxValues(checkboxValues, order)
+
+// Test One
+Test: "It should push values into the order.topping array that are not already present."
+Code:
+pushCheckboxValues(["Ground Beef", "Chicken", "Bacon"], newPizzaOrder);
+Expected Result:
+let newPizzaOrder = (["Ground Beef", "Chicken", "Bacon"], "", 0);

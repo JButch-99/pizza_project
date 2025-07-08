@@ -1,0 +1,8 @@
+Describe: Pizza.prototype.updateSize(selection);
+
+// Test One
+Test: "It should update the Pizza object, using the value of the selection."
+let newPizzaOrder = new Pizza([], "", 0);
+newPizzaOrder.updatePricing("Large");
+Expected Results
+Pizza {topping: [], size: "Large", price: 0};

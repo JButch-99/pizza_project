@@ -1,0 +1,36 @@
+Describe: calculatePizzaSizePrice();
+
+// Test One  
+Test: "It should add 5.99 to the newPizzaOrder object, if the size of the pizza is a personal pizza size."
+Code:
+let newPizzaOrder = new Pizza([], "Personal", 0);
+Expected Result:
+newPizzaOrder([], "Personal", 5.99);
+
+// Test Two
+Test: "It should add 8.99 to the newPizzaOrder object for price, if the size of the pizza is a small pizza size."
+Code:
+let newPizzaOrder = new Pizza([], "", 0);
+Expected Result:
+newPizzaOrder([], "Small", 8.99); 
+
+// Test Three
+Test: "It should add 11.99 to the newPizzaOrder object for price, if the size of the pizza is a medium pizza size."
+Code:
+let newPizzaOrder = new Pizza([], "", 0);
+Expected Result:
+newPizzaOrder([], "Medium", 11.99);
+
+// Test Four
+Test: "It should add 14.99 to the newPizzaOrder object for price, if the size of the pizza is a large pizza size."
+Code:
+let newPizzaOrder = new Pizza([], "", 0);
+Expected Result:
+newPizzaOrder([], "Large", 14.99);
+
+// Test Five
+Test: "It should add 17.99 to the newPizzaOrder object for price, if the size of the pizza is a extra large size."
+Code:
+let newPizzaOrder = new Pizza([], "", 0);
+Expected Result:
+newPizzaOrder([], "Extra Large", 0);

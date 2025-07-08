@@ -1,0 +1,7 @@
+Describe: Pizza();
+
+Test: "It should return an object for Pizza with three properties: toppings, size, and price."
+Code:
+let newPizzaOrder = new Pizza(["pepperoni", "chicken"], "Extra Large", 17.99);
+Expected Results:
+Pizza {toppings: ["pepperoni", "chicken"], size: "Extra Large", price: 17.99}

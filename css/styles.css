@@ -11,7 +11,10 @@ body {
 
 .body-1 {
   grid-area: 1/1/2/6;
-  text-align: center;
+  background-color: yellow;
+  border: solid goldenrod 12px;
+  color: red;
+  margin: 15px;
 }
 
 .body-2 {
@@ -24,6 +27,8 @@ body {
 
 .body-4 {
   grid-area: 2/2/5/5;
+  background-color: wheat;
+  margin: 1%;
 }
 
 .body-5 {
@@ -36,4 +41,50 @@ body {
 
 .body-7 {
   grid-area: 5/4/6/5;
+}
+
+.contentBox {
+  background-color: gray;
+  border: solid silver 3px;
+  margin: 1%;
+  padding: 5%;
+  overflow:hidden;
+  max-width: 300px;
+  min-width: 300px;
+}
+
+.header {
+  font-size: 150%;
+  text-align: center;
+  background-color: yellow;
+  border: solid darkgoldenrod 3px;
+  color: red;
+  border-radius: 25px;
+  margin: 2%;
+  padding: 1%;
+}
+
+.category {
+  text-align: center;
+  font-size: 150%;
+  color: black;
+  font-weight: 500;
+}
+
+button {
+  display: block;
+  margin: auto;
+  margin: 3%;
+}
+
+.section {
+  background-color: azure;
+  color: black;
+  border: solid black 3px;
+  padding: 5%;
+  text-align: center;
+}
+
+select:hover {
+  font-size: 125%;
 }

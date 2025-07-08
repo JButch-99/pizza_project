@@ -11,13 +11,24 @@ Pizza.prototype.updatePricing = function(charge) {
   return this.price += charge;
 }
 
+Pizza.prototype.updateSize = function(selection) {
+  return this.size = selection;
+}
+
+Pizza.prototype.clearInputtedData = function() {
+  this.topping = [];
+  this.price = 0;
+  this.size = "";
+}
+
 // Business Logic
 
-function calculateAdditionalToppingTax(toppingArray) {
-  if (toppingArray.topping.length >= 4) {
-    let additionalToppingArray = toppingArray.slice(3);
+function calculateAdditionalToppingTax(pizzaOrder) {
+  let toppingArray = pizzaOrder.topping;
+  if (toppingArray.length >= 4) {
+    let additionalToppingArray = toppingArray.slice(2);
     for (let i = 0; i < additionalToppingArray.length; i++) {
-      toppingArray.updatePricing(1.75);
+      pizzaOrder.updatePricing(1.75);
     }
   }
 }
@@ -36,14 +47,35 @@ function calculatePizzaSizePrice(pizzaOrder) {
   }
 }
 
+function pushCheckboxValues(checkboxValues, order) {
+  let toppingArray = order.topping;
+  for (let i = 0; i < checkboxValues.length; i++) {
+    if (!toppingArray.includes(checkboxValues[i].value)) {
+      toppingArray.push(checkboxValues[i].value);
+    }
+  }
+}
+
+function resetUserOrder(event, order) {
+  event.preventDefault();
+  order.clearInputtedData();
+}
 
 // UI Logic
 function handleSubmission(event, newPizzaOrder) {
   event.preventDefault();
+  const checkboxValues = document.querySelectorAll('input[name="topping"]:checked');
+  const selectValue = document.getElementById("pizzaSize").value;
+  
+  pushCheckboxValues(checkboxValues, newPizzaOrder);
+  newPizzaOrder.updateSize(selectValue);
+  calculateAdditionalToppingTax(newPizzaOrder);
+  calculatePizzaSizePrice(newPizzaOrder);
   console.log(newPizzaOrder);
 } 
 
 window.addEventListener("load", function(){
-  let newPizzaOrder = new Pizza([], "", "");
-  
+  let newPizzaOrder = new Pizza([], "", 0);
+  document.getElementById("submitButton").addEventListener("click", (event) => handleSubmission(event, newPizzaOrder));
+  document.getElementById("resetOrder").addEventListener("click", (event) => resetUserOrder(event, newPizzaOrder));
 });

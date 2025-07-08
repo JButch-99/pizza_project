@@ -1,0 +1,8 @@
+Describe: calculateAdditionalToppingTax
+
+// Test One
+Test: "It should add a 1.75 fee for each topping after the 2nd topping for the topping array."
+Code: 
+let newPizzaOrder = new Pizza(["ground beef", "pepperoni", "chicken", "pineapple"], "", 0);
+Expected Result:
+newPizzaOrder(["ground beef", "pepperoni", "chicken", "pineapple"], "", 3.50);
