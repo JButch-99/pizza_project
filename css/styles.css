@@ -1,6 +1,6 @@
 body {
-  background-color: black;
-  color: white;
+  background-color: purple;
+  color: black;
 }
 
 .grid-body {
@@ -49,8 +49,6 @@ body {
   margin: 1%;
   padding: 5%;
   overflow:hidden;
-  max-width: 300px;
-  min-width: 300px;
 }
 
 .header {
@@ -79,7 +77,6 @@ button {
 
 .section {
   background-color: azure;
-  color: black;
   border: solid black 3px;
   padding: 5%;
   text-align: center;
@@ -87,4 +84,47 @@ button {
 
 select:hover {
   font-size: 125%;
+}
+
+.pricingBoard {
+  background-color: white;
+  border: solid black 3px;
+  max-height: fit-content;
+  min-height: 400px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 6%;
+  text-align: center;
+}
+
+li {
+  text-align: left;
+  margin: 3% 0%;
+  font-size: 125%;
+  font-weight: 900;
+}
+
+.finePrint {
+  font-size: 6px;
+  border: solid whitesmoke 1px;
+  max-height: 50px;
+  min-height: 50px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.orderReceipt {
+  text-align: center;
+  max-height: 700px;
+  min-height: 700px;
+  min-width: 300px;
+  max-width: 300px;
+  border: solid black 3px;
+  margin: 3px;
+  background-color: white;
+}
+
+.image {
+  display: block;
+  margin: auto;
+  width: 70%;
 }
