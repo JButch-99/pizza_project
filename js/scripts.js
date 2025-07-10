@@ -62,6 +62,20 @@ function resetUserOrder(event, order) {
 }
 
 // UI Logic
+
+function appendOrderInformation(pizzaOrder) {
+  const receiptForOrder = document.getElementById("orderSheet");
+  const pizzaOrderToppingArray = pizzaOrder.topping;
+  const pizzaOrderSize = pizzaOrder.size;
+  let number = 0;
+  receiptForOrder.innerHTML = '';
+  
+  for (let i = 0; i < pizzaOrderToppingArray.length; i++) {
+    number++;
+    console.log(number);
+  }
+}
+
 function handleSubmission(event, newPizzaOrder) {
   event.preventDefault();
   const checkboxValues = document.querySelectorAll('input[name="topping"]:checked');
@@ -71,6 +85,7 @@ function handleSubmission(event, newPizzaOrder) {
   newPizzaOrder.updateSize(selectValue);
   calculateAdditionalToppingTax(newPizzaOrder);
   calculatePizzaSizePrice(newPizzaOrder);
+  appendOrderInformation(newPizzaOrder);
   console.log(newPizzaOrder);
 } 
 

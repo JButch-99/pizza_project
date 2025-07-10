@@ -15,6 +15,7 @@ body {
   border: solid goldenrod 12px;
   color: red;
   margin: 15px;
+  border-radius: 100%;
 }
 
 .body-2 {
@@ -126,5 +127,17 @@ li {
 .image {
   display: block;
   margin: auto;
-  width: 70%;
+  width: 80%;
+  border: solid black 3px;
+}
+
+.centered {
+  text-align: center;
+  font-weight: 900;
+}
+
+.logo {
+  text-align: center;
+  display: block;
+  margin: 2% 0%;
 }
