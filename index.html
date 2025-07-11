@@ -15,7 +15,7 @@
       <div class="body-2">
         <div class="contentBox">
           <h1 class="header">Pizza Toppings</h1>
-          <form id="toppingLists">
+          <form id="orderInfo">
             <div class="section">
               <h1 class="category">Meats</h1>
               <input type="checkbox" id="pepperoni" value="Pepperoni" name="topping"> 
@@ -35,7 +35,7 @@
 
               <h1 class="category">Veggies & More</h1>
               <input type="checkbox" id="bell peppers" value="Bell Peppers" name="topping">
-              <label for="peppers">Bell Pepper</label><br>
+              <label for="bell peppers">Bell Pepper</label><br>
               
               <input type="checkbox" id="onions" value="Onions" name="topping">
               <label for="onions">Onion</label><br>
@@ -61,9 +61,9 @@
                 <option value="Extra Large">Extra Large - $17.99</option>
               </select><br>
             </div>
+            <button type="submit" id="submitButton">Submit Order</button> 
           </form>
-          <button type="button" id="submitButton">Submit Order</button> 
-          <button type="button" id="resetOrder">Clear Order</button>
+          <button type="click" id="resetOrder">Clear Order</button>
         </div>
       </div>
 
@@ -98,9 +98,10 @@
             <div class="orderReceipt">
               <h1>Coding Pizzeria</h1>
               <ul id="orderSheet">
-                <li>Pizza Size:  <span id="pizzaOrderSize">____</span></li>
+                
               </ul>
-              <p>Total Price: <span id="price-tag">_____</span></p>
+              <p id="pizzaOrderSize"></p>
+              <p id="price-tag"></p>
             </div>
           </div>
           <div class="col-md-6">
