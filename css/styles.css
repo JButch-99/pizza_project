@@ -3,6 +3,11 @@ body {
   color: black;
 }
 
+a {
+  font-weight:500;
+  color: darkblue;
+}
+
 .grid-body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -27,22 +32,12 @@ body {
 }
 
 .body-4 {
-  grid-area: 2/2/5/5;
+  grid-area: 2/2/6/5;
   background-color: wheat;
   margin: 1%;
 }
 
-.body-5 {
-  grid-area: 5/2/6/3;
-}
 
-.body-6 {
-  grid-area: 5/3/6/4;
-}
-
-.body-7 {
-  grid-area: 5/4/6/5;
-}
 
 .contentBox {
   background-color: gray;
