@@ -19,7 +19,7 @@ Pizza.prototype.clearInputtedData = function() {
   this.topping.length = 0;
   this.price = 0;
   this.size = "";
-}
+} 
 
 // Business Logic
 
@@ -56,13 +56,11 @@ function pushCheckboxValues(checkboxValues, order) {
   }
 }
 
-
 // UI Logic
 
 function resetUserOrder(order) {
   clearOrder();
   order.clearInputtedData();
-  console.log("test");
 }
 
 function clearOrder() {
@@ -88,9 +86,11 @@ function appendToppingArray(pizzaTopping) {
   })
 }
 
-function appendOrderSize(pizzaSize) {
+function appendOrderSizeAndPrice(pizzaSize, pizzaPrice) {
   const sizeInfo = document.getElementById("pizzaOrderSize");
-  sizeInfo.textContent = pizzaSize;
+  const priceInfo = document.getElementById("price-tag");
+  sizeInfo.textContent = "Pizza Size: " + pizzaSize;
+  priceInfo.textContent = "Pizza Price: " + pizzaPrice;
 }
 
 function handleSubmission(event, newPizzaOrder) {
@@ -100,11 +100,18 @@ function handleSubmission(event, newPizzaOrder) {
   clearOrder();
   pushCheckboxValues(checkboxValues, newPizzaOrder);
   newPizzaOrder.updateSize(selectValue);
-  calculateAdditionalToppingTax(newPizzaOrder);
-  calculatePizzaSizePrice(newPizzaOrder);
-  appendToppingArray(newPizzaOrder.topping);
-  appendOrderSize(newPizzaOrder.size);
-  newPizzaOrder.clearInputtedData();
+  if (newPizzaOrder.size === "invalid" || newPizzaOrder.topping.length === 0) {
+    const receipt = document.getElementById("orderSheet");
+    let li = document.createElement("li");
+    li.textContent = "Please choose a topping and a size!";
+    receipt.append(li);
+  } else {
+    calculateAdditionalToppingTax(newPizzaOrder);
+    calculatePizzaSizePrice(newPizzaOrder);
+    appendToppingArray(newPizzaOrder.topping);
+    appendOrderSizeAndPrice(newPizzaOrder.size, newPizzaOrder.price);
+    newPizzaOrder.clearInputtedData();
+  }
 } 
 
 window.addEventListener("load", function(){

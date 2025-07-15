@@ -83,10 +83,6 @@ button {
   text-align: center;
 }
 
-select:hover {
-  font-size: 125%;
-}
-
 .pricingBoard {
   background-color: white;
   border: solid black 3px;
@@ -140,4 +136,11 @@ li {
   text-align: center;
   display: block;
   margin: 2% 0%;
+}
+
+.receiptInfo {
+  text-align: left;
+  margin: 5%;
+  font-size: 150%;
+  font-weight: 600;
 }
