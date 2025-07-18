@@ -56,6 +56,7 @@ function pushCheckboxValues(checkboxValues, order) {
   }
 }
 
+
 // UI Logic
 
 function resetUserOrder(order) {
@@ -73,6 +74,7 @@ function appendToppingArray(pizzaTopping) {
   const receiptForOrder = document.getElementById("orderSheet");
   const firstPizzaArrayItems = pizzaTopping.slice(0, 3);
   const secondPizzaArrayItems = pizzaTopping.slice(3);
+
   firstPizzaArrayItems.forEach(function(topping) {
     let li = document.createElement("li");
     li.textContent = topping + ": " + "0.00";;

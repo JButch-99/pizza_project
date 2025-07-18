@@ -27,15 +27,13 @@ _This is a program made to help you order a pizza! You have 2 sections for custo
 
 NOTE: If you are seeing this on an alternative source, please click on [this link](https://github.com/JButch-99/pizza_project).
 
-1. _To begin, click on the green button labeled "<> Code" located in the upper right-hand corner of your screen."_
+1. _To begin, click on the green button labeled "<> Code" located in the upper right-hand corner of your browser page."_
 
 2. _Once you click it, please click the "download ZIP" option at the bottom of the drop-down screen that is shown."_
 
-3. _Once downloaded, you will need to extract the files and unzip them to gain access. Click "Extract All" or, if on Mac just double click the ZIP file, to unzip it._
+3. _Once downloaded, you will need to extract the files to gain access to the files for full functionality. Click "Extract All" in the folder or, if on Mac just double click the ZIP file, to extract and unzip the files._
 
-4. _Once downloaded, you should have a new pop-up that is your newly extracted folder. Click on the "index.html" in this folder to access the project in a browser of choice by right clicking it._
-
-5. _If you wish to modify the project, right click the "index.html" file. You will see many options to choose from. Above the share option, there is "open with" option. This will allow you to open it in a code editor of choice._
+4. _You should have a newly extracted file after this process. Click on the "index.html" in this folder to access the project in a browser of choice by right clicking it._ 
 
 ## Known Bugs
 * _No known bugs at this current moment._
