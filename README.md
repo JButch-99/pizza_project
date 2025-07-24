@@ -34,7 +34,7 @@ NOTE: If you are seeing this on an alternative source, please click on [this lin
 3. _Navigate and click on the "index.html" in this extracted folder to access the project in a browser of choice by right clicking it._ 
 
 ## Known Bugs
-* _No known bugs at this current moment._
+* _For sizes below Extra Large, sometimes code can have a rounding issue for pricing. Will be fixed at a future date (7/24/2025)._
 
 ## Licensing 
 [MIT](/license.txt)
