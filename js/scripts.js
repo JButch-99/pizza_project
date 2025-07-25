@@ -8,7 +8,13 @@ function Pizza(topping, size, price) {
 // Business Logic for Pizza Object
 
 Pizza.prototype.updatePricing = function(charge) {
-  return this.price += charge;
+  if (charge !== 0) {
+    this.price += charge;
+    this.price = Math.round(this.price * 100) / 100;
+    return this.price;
+  } else {
+    return this.price;
+  }
 }
 
 Pizza.prototype.updateSize = function(selection) {
